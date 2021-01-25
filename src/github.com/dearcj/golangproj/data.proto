@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+message CustomObject { //not in use
+    NetworkObject networkObject = 1;
+    int32 param1 = 2;
+    int32 param2 = 3;
+    int32 param3 = 4;
+}
+
+message Player {
+    uint32 startPosition = 3;
+    string name = 1;
+    NetworkObject networkObject = 2;
+}
+
+message Fish {
+    uint32 Hp = 1;
+    uint32 Maxhp = 2;
+    uint32 CurveInx = 7;
+    uint32 FishType = 3;
+    uint64 StartTime = 6;
+    uint64 CurveTime = 5;
+    bool IsBoss = 8;
+    NetworkObject networkObject = 4;
+}
+
+message NetworkObject {
+    uint32 ID = 1;
+    uint32 Type = 2;
+}
+
+enum ActionType {
+    ANY_VALUE = 0;
+}
+
+message Action {
+    ActionType Type = 1;
+    float Value = 2;
+    float Value2 = 4;
+
+    uint32 TargetID = 3;
+}
+
+message ConnectionData {
+    uint32 roomID = 1;
+    uint32 playerID = 2;
+    uint32 conMsg = 3;
+}
+
+message LocationData {
+    string locationName = 2;
+    uint32 roomId = 3;
+}
+
+
+message AccountGeneral {
+    float Money = 1;
+    string Username = 2;
+}
+
+message ServerData {
+    ConnectionData conData = 2;
+    AccountGeneral accountGeneral = 3;
+    LocationData locationData = 4;
+
+    repeated string curves = 5;
+    repeated CustomObject customObjects = 6;
+    repeated Fish fishes = 7;
+    repeated Player players = 8;
+    repeated Action actions = 9;
+}
+
+message Command {
+    int32 CommandId = 1;
+    repeated int32 Params = 2;
+}
+
+message ClientData {
+    int32 roomId = 2;
+    repeated Command commands = 3;
+}

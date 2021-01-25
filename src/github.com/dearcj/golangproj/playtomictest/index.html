@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="playtomic.js"> </script>
+    <script>
+        var private = "testprivate";
+        var public  = "testpublic";
+
+        Playtomic.initialize(public, private, "http://5.200.55.232:3000/");
+
+        Playtomic.PlayerLevels.save({name: "bomj", level: Math.round(Math.random()*20)}, function (r) {
+            console.log(r);
+        });
+
+    </script>
+    <title>LOL</title>
+</head>
+<body>
+
+</body>
+</html>

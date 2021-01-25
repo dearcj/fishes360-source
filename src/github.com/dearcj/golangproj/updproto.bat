@@ -1,0 +1,1 @@
+pbjs -t static-module -w es6  data.proto > ./front/compiled.js & pbts -o ./front/compiled.d.ts ./front/compiled.js & protoc --go_out=plugins=grpc:./network/ data.proto

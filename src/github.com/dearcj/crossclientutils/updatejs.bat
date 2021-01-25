@@ -1,0 +1,1 @@
+joy crossclientutils.go > ../golangproj/front/crossclientutils.js

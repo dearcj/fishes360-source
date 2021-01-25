@@ -1,0 +1,10 @@
+server:
+  timelinefile: 'front/timeline.json'
+  nodb: false
+  http_key: vkMfSCmAsf
+debug:
+  log_file: 'asd.txt'
+  log_level: 'debug'
+admin:
+  login: 'admin@gmail.com'
+  pass: 'admin123'
