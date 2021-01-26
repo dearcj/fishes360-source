@@ -1,5 +1,0 @@
-server:
-  nodb: false
-  http_key: vkMfSCmAsf
-debug:
-  log_config: ./configs/logger.json
