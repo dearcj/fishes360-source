@@ -1,6 +1,6 @@
 package main
 
-import "time"
+//import "time"
 
 const OVERKILL_DAMAGE = 5
 
@@ -151,7 +151,7 @@ func (a *BaseCharacter) DealProbDamage(damageDealer *BaseCharacter, gun *Gun) (l
 					_, money := fish.(*Fish).getMoneyPrize(damageDealer.Object.session, pl.(*Player).currentGun.Damage, a.Object.factory.run.RoomCoef, a.Object.factory.run.timeline.RTP)
 
 					damageDealer.Object.session.NeedToKnow(pl.(*Player).AddMoney(float32(money)))
-					r := damageDealer.Object.session.run
+					//r := damageDealer.Object.session.run
 					//timeline := r.timeline
 					/*if fish.(*Fish).FishConfig.IsBoss {
 						if timeline.CurrentScene.Name == "aquaman" {
